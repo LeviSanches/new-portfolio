@@ -1,0 +1,127 @@
+@media screen and (max-width: 1670px) {  
+  main #portfolio article {
+    display: grid;
+    grid-template-areas: 
+    "portfolio-1 portfolio-2 portfolio-3 portfolio-4";
+  }
+
+  main #about {
+    width: 80%;
+  }
+
+  
+}
+
+@media screen and (max-width: 1480px) {  
+  main #skills div {
+    display: grid;
+    grid-template-areas: 
+    "frontend backend"
+    ". deploy";
+  }  
+}
+
+@media screen and (max-width: 1350px) {  
+  main #portfolio article figure {
+    width: 250px;
+    height: 250px;    
+  }
+
+  main #about {
+    width: 80%;
+  }
+  
+  main #about h1{
+    font-size: 2.3rem;    
+  }
+
+  main #about p {
+    font-size: 1.2rem;
+    text-indent: 2rem;
+  }
+}
+
+@media screen and (max-width: 1133px) {  
+  main #portfolio article {
+  display: grid;
+  grid-template-areas: 
+  "portfolio-1 portfolio-2";
+  }
+}
+
+@media screen and (max-width: 980px) {  
+  main #skills div {
+    display: grid;
+    grid-template-areas: 
+    "frontend"
+    ;
+  }  
+}
+
+@media screen and (max-width: 776px) {
+  html body {
+    background-attachment: scroll;  
+  } 
+
+  body header nav{
+      display: none;
+  }
+  
+  body header div {
+    display: block;
+    margin: 2rem;
+    cursor: pointer;
+  }
+
+  main #portfolio article {
+    display: grid;
+    grid-template-areas: 
+    "portfolio-1 portfolio-2";
+  }
+
+  main #portfolio article figure {
+    width: 250px;
+    height: 250px;    
+  }
+
+  main #about h1{
+    font-size: 1.5rem;    
+  }
+
+  main #about {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 568px) {  
+  main #portfolio article figure {
+    width: 250px;
+    height: 250px;    
+  }
+  
+  main #portfolio article {
+  display: grid;
+  grid-template-areas: 
+  "portfolio-1";
+  }
+}
+
+@media screen and (max-width: 480px) {  
+  main #skills h1 {
+    font-size: 2rem;
+  }
+
+  main #skills div article ul li {
+    font-size: 10px;
+  }
+
+  main #skills article ul li{    
+    height: 5rem;
+    width: 18rem;    
+  }
+
+  main #skills article ul li img{  
+    height: 3rem;
+    width: 3rem;      
+  }
+}

@@ -1,23 +1,41 @@
 @import url(reset.css);
 @import url(fonts.css);
 @import url(images.css);
+@import url(response.css);
 
-#about, #portfolio, #skills {
+header nav{
+  display: flex;
+  justify-content: center;
+}
+
+header div {
   display: none;
 }
 
-html {
-  background-image: url(../images/background.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat; 
+header div ul {
+  display: none;
 }
 
-body {
-  background-image: linear-gradient(#4a67b6bd, #ffffffb0);
-  height: 100vh;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
+section {    
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+}
+
+section.active {  
+  position: static;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body {  
+  background-image: url(../images/background-fotor-20230625123851.jpg);  
+  background-size: cover;
+  background-repeat: no-repeat;  
+  background-attachment: fixed;  
 }
 
 main, section, article {
@@ -26,29 +44,31 @@ main, section, article {
   align-items: center;
 }
 
-main {
-  margin: 3rem;  
-  width: 100%;
-}
-
 ul {
   display: flex;
 }
 
-header a:hover {
+header li:hover {
   background-color: #ffffff;
   border-radius: 1rem;
   color: #4A66B6;
   transition: 500ms;
+  cursor: pointer;
 }
 
 header ul li {
   margin: 1rem;
   font-size: 1.7rem;
+  padding: 1rem;
+  font-weight: 200;
 }
 
 article h2, article span, article ul, article li{
   margin: 0.8rem;
+}
+
+#main, #about, #portfolio, #skills{
+  margin-top: 6rem;
 }
 
 #main article div:hover {
@@ -58,10 +78,14 @@ article h2, article span, article ul, article li{
   transition: 500ms;
 }
 
+#main h1 {
+  margin: 1rem;
+}
+
 #about { 
   width: 60%;
-  background-color: #ffffff80;
-  border-radius: 1rem;
+  background-color: #ffffff1e;
+  border-radius: 1rem;  
 }
 
 #about article {
@@ -77,9 +101,8 @@ article h2, article span, article ul, article li{
 #portfolio article figure {
   width: 300px;
   height: 300px;
-  border: 2px solid #4A66B6;
-  background-color: #ffffff;
-  margin: 1rem;
+  border: 2px solid #4a67b671;  
+  margin: 1rem 1rem 15rem 1rem;
   border-radius: 1rem;
   transition: transform 0.5s ease, box-shadow 0.4s ease;
   display: flex;
@@ -96,8 +119,48 @@ article h2, article span, article ul, article li{
   border-radius: 1rem;
 }
 
-figure:hover {
+#portfolio figure:hover {
   transform: translateY(-8px);
   box-shadow: 15px 8px 6px -6px #4a67b679;
   cursor: pointer;
+}
+
+#skills div {
+  display: flex;
+  width: 100%;
+}
+
+#skills article {
+  background-color: #ffffff31;
+  margin: 2rem;    
+  border-radius: 1rem;
+}
+
+#skills article ul{
+  display: flex;
+  flex-direction: column;
+}
+
+#skills article ul li{
+  background-color: #8686862c;
+  height: 7rem;
+  width: 24rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  transition: transform 500ms, box-shadow 500ms;
+}
+
+#skills article ul li:hover{
+  transform: translateY(-8px);
+  box-shadow: 15px 8px 6px -6px #4a67b679;
+  cursor: pointer;
+}
+
+#skills article ul li img{  
+  height: 5rem;
+  width: 5rem;  
+  border-radius: 1rem;
+  margin-right: 1rem;
 }
